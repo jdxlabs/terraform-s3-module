@@ -6,7 +6,7 @@ variable "name" {
 }
 
 variable "tags" {
-  type        = object()
+  type        = map(any)
   default     = null
   description = "Details the tags to apply to the bucket"
 }
