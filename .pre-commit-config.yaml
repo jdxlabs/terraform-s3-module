@@ -11,4 +11,3 @@ repos:
   hooks:
     - id: detect-secrets
       args: ['--baseline', '.pre-commit-config/.secrets.baseline']
-      exclude: .*/tests/.*
