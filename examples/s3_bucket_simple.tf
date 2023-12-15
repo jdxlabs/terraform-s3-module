@@ -5,7 +5,7 @@
 
 module "test_s3" {
   #checkov:skip=CKV_TF_1: "Ensure Terraform module sources use a commit hash"
-  source = "git::https://github.com/jdxlabs/terraform-s3-module.git?ref=0.0.2"
+  source = "git::https://github.com/jdxlabs/terraform-s3-module.git?ref=0.0.3"
   name   = "${var.workspace}-${var.env}-test-bucket"
 
   tags = {

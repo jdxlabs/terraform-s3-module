@@ -36,7 +36,11 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_bucket_arn"></a> [bucket\_arn](#output\_bucket\_arn) | Bucket ARN |
+| <a name="output_bucket_id"></a> [bucket\_id](#output\_bucket\_id) | Bucket Name (aka ID) |
+| <a name="output_bucket_name"></a> [bucket\_name](#output\_bucket\_name) | Bucket Name |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 
