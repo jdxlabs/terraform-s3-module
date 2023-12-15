@@ -18,28 +18,22 @@ Look at the [examples](https://github.com/jdxlabs/terraform-s3-module/tree/main/
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
-## Pre-commit
+### Pre-commit setup
 
 [Pre-commit](https://pre-commit.com/) is used to validate the code.  
 
-Install pre-commit and complementary tools before any modification.
+Install pre-commit and dependencies before any modification.
 
 ```bash
-# pre-commit
+# install pre-commit
 brew install pre-commit
 pre-commit install
 
-# tflint
-brew install tflint
+# install pre-commit dependencies
+brew install tflint checkov detect-secrets terraform-docs
 
-# checkov
-brew install checkov
-
-# terraform-docs
-brew install terraform-docs
-
-# detect-secrets
-brew install detect-secrets
+# run pre-commit (useful when adding new hooks)
+pre-commit run --all-files
 ```
 
 
