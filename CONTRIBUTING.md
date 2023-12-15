@@ -5,21 +5,28 @@
 [Pre-commit](https://pre-commit.com/) is used to validate the code.  
 Install pre-commit and dependencies before any modification of the module.
 
+
+Install pre-commit and dependencies :
 ```bash
-# install pre-commit and dependencies
 brew install pre-commit \
     tflint \
     checkov \
     detect-secrets \
     terraform-docs
+```
 
-# generate secrets baseline
+Generate secrets baseline (for detection of secrets) :
+```bash
 detect-secrets scan > .pre-commit-config/.secrets.baseline
+```
 
-# install pre-commit
+Install pre-commit :
+```bash
 pre-commit install
+```
 
-# run all pre-commit checks (useful when adding new hooks)
+Run all pre-commit checks (useful when adding new hooks)
+```bash
 pre-commit run --all-files
 ```
 
