@@ -2,10 +2,42 @@
 
 A simple terraform s3 module.
 
-## Pre-requisites
 
-- [Terraform](https://www.terraform.io/)
-- [AWS CLI](https://aws.amazon.com/cli/)
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.2 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.0, < 5.16.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4.0, < 5.16.0 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [aws_s3_bucket.b](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | Name for the bucket. If omitted, Terraform will assign a random, unique name. | `string` | `null` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | Details the tags to apply to the bucket | `map(any)` | `null` | no |
+
+## Outputs
+
+No outputs.
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 
 ## Usage
@@ -15,31 +47,7 @@ Look at the [examples](https://github.com/jdxlabs/terraform-s3-module/tree/main/
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-### Pre-commit setup
-
-[Pre-commit](https://pre-commit.com/) is used to validate the code.  
-Install pre-commit and dependencies before any modification of the module.
-
-```bash
-# install pre-commit and dependencies
-brew install pre-commit \
-    tflint \
-    checkov \
-    detect-secrets \
-    terraform-docs
-
-# generate secrets baseline
-detect-secrets scan > .pre-commit-config/.secrets.baseline
-
-# install pre-commit
-pre-commit install
-
-# run all pre-commit checks (useful when adding new hooks)
-pre-commit run --all-files
-```
+Please follow the [contributing guidelines](https://github.com/jdxlabs/terraform-s3-module/tree/main/CONTRIBUTING.md)
 
 
 ## License
